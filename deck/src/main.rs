@@ -4,9 +4,9 @@ struct Deck {
 }
 
 fn build_complete_deck() -> Vec<String> {
-    let suits = vec!["Hearts", "Diamonds", "Clubs", "Spades"];
-    let values = vec![
-        "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace",
+    let suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
+    let values = [
+        "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace",
     ];
 
     let mut deck = Vec::new();
