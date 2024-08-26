@@ -3,6 +3,14 @@ struct Deck {
     cards: Vec<String>,
 }
 
+impl Deck {
+    fn new() -> Self {
+        Deck {
+            cards: build_complete_deck(),
+        }
+    }
+}
+
 fn build_complete_deck() -> Vec<String> {
     let suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
     let values = [
@@ -34,9 +42,7 @@ fn main() {
     };
     println!("STANDARD DECK: {:?}", deck);
 
-    let complete_deck: Deck = Deck {
-        cards: build_complete_deck(),
-    };
+    let complete_deck: Deck = Deck::new();
 
     print_deck(&complete_deck)
 }
