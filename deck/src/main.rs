@@ -21,6 +21,13 @@ fn build_complete_deck() -> Vec<String> {
     deck
 }
 
+fn print_deck(deck: &Deck) {
+    println!("Printing deck of cards with {} cards: ", deck.cards.len());
+    for card in deck.cards.iter() {
+        print!("{} | ", card);
+    }
+}
+
 fn main() {
     let deck = Deck {
         cards: vec!["Ace of Spades".to_string(), "2 of Spades".to_string()],
@@ -31,5 +38,5 @@ fn main() {
         cards: build_complete_deck(),
     };
 
-    println!("COMPLETE DECK: {:?}", complete_deck);
+    print_deck(&complete_deck)
 }
