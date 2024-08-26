@@ -13,7 +13,8 @@ fn build_complete_deck() -> Vec<String> {
 
     for suit in suits.iter() {
         for value in values.iter() {
-            deck.push(format!("{} of {}", value, suit));
+            let card = format!("{} of {}", value, suit);
+            deck.push(card);
         }
     }
 
